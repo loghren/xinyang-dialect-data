@@ -347,7 +347,7 @@ void transformdata(
 				featureVector.push_back(changedata[feature][k][s]);
 			}
 			int accsum = accumulate(featureVector.begin(), featureVector.end(), 0);
-			if (accsum <= 3 || accsum >= changedata[0].size() - 3) {
+			if (accsum <= 1 || accsum >= changedata[0].size() - 1) {
 				for (int k = 0; k < featureSize; ++k) {
 					changedata[feature][k][s] = -1;
 				}
